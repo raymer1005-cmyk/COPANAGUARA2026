@@ -1,0 +1,48 @@
+@model IEnumerable<TeamNaGuara.Models.Team>
+@{
+    ViewData["Title"] = "Panel Admin";
+}
+<h2>Panel Administrativo - Team Na' Guara</h2>
+<p><a class="btn btn-secondary" asp-action="ExportCsv">Exportar CSV</a> | <a class="btn btn-danger" asp-controller="Account" asp-action="Logout">Logout</a></p>
+<ul class="nav nav-tabs" id="adminTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="teams-tab" data-bs-toggle="tab" data-bs-target="#teams" type="button" role="tab">Equipos</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="players-tab" data-bs-toggle="tab" data-bs-target="#players" type="button" role="tab">Jugadoras</button>
+  </li>
+</ul>
+<div class="tab-content mt-3">
+  <div class="tab-pane fade show active" id="teams" role="tabpanel">
+    <table class="table">
+      <thead><tr><th>Equipo</th><th>Rep.</th><th>Jugadoras</th></tr></thead>
+      <tbody>
+      @foreach(var t in Model){
+        <tr>
+          <td>@t.Name</td>
+          <td>@t.Representative<br/>@t.Phone</td>
+          <td>@(t.Players?.Count ?? 0)</td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="players" role="tabpanel">
+    <table class="table">
+      <thead><tr><th>Nombre</th><th>Documento</th><th>Equipo</th><th>Foto</th><th>Doc</th></tr></thead>
+      <tbody>
+      @foreach(var t in Model){
+        foreach(var p in t.Players ?? new List<TeamNaGuara.Models.Player>()){
+          <tr>
+            <td>@p.FullName</td>
+            <td>@p.DocumentNumber</td>
+            <td>@t.Name</td>
+            <td>@(p.PhotoPath != null ? Html.Raw($"<a href=\"{p.PhotoPath}\" target=\"_blank\">ver</a>") : "-")</td>
+            <td>@(p.DocumentImagePath != null ? Html.Raw($"<a href=\"{p.DocumentImagePath}\" target=\"_blank\">ver</a>") : "-")</td>
+          </tr>
+        }
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

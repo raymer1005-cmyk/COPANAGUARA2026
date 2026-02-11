@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Na' Guara - Copa Pachacámac 2025</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6A0DAD, #808080);
+            color: white;
+            text-align: center;
+        }
+
+        /* Logo grande */
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #dcdcdc;
+        }
+
+        /* Botón principal */
+        button {
+            background: linear-gradient(135deg, #6A0DAD, #808080);
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 25px 70px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+            transition: transform 0.2s, background 0.3s;
+        }
+
+            button:hover {
+                transform: scale(1.05);
+                background: linear-gradient(135deg, #7B2BCB, #A0A0A0);
+            }
+
+        /* Íconos de WhatsApp y TikTok */
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+                filter: brightness(0) invert(1);
+                transition: transform 0.3s, filter 0.3s;
+                cursor: pointer;
+            }
+
+                .social-icons img:hover {
+                    transform: scale(1.2);
+                    filter: brightness(1) invert(0);
+                }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <img src="logo.png" alt="Logo Team Na' Guara">
+
+    <!-- Texto de bienvenida -->
+    <h1>Bienvenido a Team Na’ Guara</h1>
+    <p>Copa Pachacámac 2025🏆 – Registro de Equipos y Jugadoras📝</p>
+   
+    <!-- Botón principal -->
+    <button onclick="window.location.href='https://chat.whatsapp.com/JmtcBLszmoW1McLFRosM2y?mode=gi_t'">🚀 Iniciar</button>
+
+    <!-- Íconos sociales -->
+    <div class="social-icons">
+        <a href="https://wa.me/+51953111341" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.tiktok.com/@naguara_04" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+        </a>
+    </div>
+    <footer>
+        © 2025 Club Deportivo Team Na’ Guara · Lima - Pachacámac
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿/* ==== ESTILO PRINCIPAL TEAM NA'GUARA (MORADO & GRIS) ==== */
+
+/* Fondo general */
+body {
+    background-color: #f3f4f6; /* gris claro */
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.container.form-wrapper {
+    max-width: 720px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Card blanca con sombra */
+.card.custom-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Título con tono morado */
+.text-team-primary {
+    color: #6a0dad; /* morado principal */
+    font-weight: 700;
+}
+
+/* Botón principal */
+.btn-team {
+    background-color: #6a0dad; /* morado */
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+    .btn-team:hover {
+        background-color: #580b8c; /* morado oscuro al pasar */
+        transform: scale(1.03);
+    }
+
+/* Inputs */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+}
+
+/* Etiquetas */
+label {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+/* Mensaje de éxito */
+.alert-success-custom {
+    background-color: #efe9f9;
+    border: 1px solid #d2b8f4;
+    color: #4c0b82;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+    .container.form-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+}

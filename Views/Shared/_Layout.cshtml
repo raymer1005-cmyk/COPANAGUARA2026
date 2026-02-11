@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Team Na' Guara</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="p-3">
+    <div class="container">
+        <header class="mb-4">
+            <h1><a asp-controller="Home" asp-action="Index">Team Na' Guara - Copa Pachacámac 2025</a></h1>
+            <nav>
+                <a asp-controller="Teams" asp-action="Register">Registrar Equipo</a> |
+                <a asp-controller="Players" asp-action="Register">Registrar Jugadora</a> |
+                <a asp-controller="Admin" asp-action="Index">Panel Admin</a>
+            </nav>
+        </header>
+        <main role="main" class="pb-3">@RenderBody()</main>
+        <footer class="border-top pt-3 mt-4">&copy; 2025 Team Na' Guara</footer>
+    </div>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

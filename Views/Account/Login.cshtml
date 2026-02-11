@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>Iniciar sesión - Admin</h2>
+<form method="post" asp-action="Login">
+    <div class="mb-2">
+        <label>Usuario</label>
+        <input name="username" class="form-control" />
+    </div>
+    <div class="mb-2">
+        <label>Contraseña</label>
+        <input name="password" type="password" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Entrar</button>
+</form>
+@if(!ViewData.ModelState.IsValid){<div class="text-danger">Usuario o contraseña inválidos</div>} 
